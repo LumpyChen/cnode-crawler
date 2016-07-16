@@ -1,6 +1,4 @@
-const express = require('express'),
-  // superagent = require('superagent'),
-  https = require('https'),
+const https = require('https'),
   http = require('http'),
   cheerio = require('cheerio');
 
@@ -36,5 +34,8 @@ http.createServer((req, sres)=>{
   })
 
 }).listen(3000, (err) => {
-    console.log('Server listening on port 3000...');
+    if (err) {
+      throw err
+    }
+    // console.log('Server listening on port 3000...');
 })
